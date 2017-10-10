@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+//import {desktopCapturer} from 'electron';
+//import * as electron from 'electron';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+ constructor(){
+  //console.log(electron.desktopcapture);
+ }
 }
