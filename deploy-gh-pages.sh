@@ -2,10 +2,12 @@
 echo "Starting deployment"
 echo "Target: gh-pages branch"
 
-DIST_DIRECTORY="dist/"
+DIST_DIRECTORY="src/"
 CURRENT_COMMIT=`git rev-parse HEAD`
 ORIGIN_URL=`git config --get remote.origin.url`
 echo "$ORIGIN_URL"
+
+ls $DIST_DIRECTORY
 
 ORIGIN_URL_WITH_CREDENTIALS=${ORIGIN_URL/\/\/github.com/\/\/$GITHUB_TOKEN@github.com}
 
@@ -14,7 +16,7 @@ echo "$ORIGIN_URL_WITH_CREDENTIALS"
 cp .gitignore $DIST_DIRECTORY || exit 1
 
 echo "Checking out gh-pages branch"
-git checkout gh-pages || exit 1
+git checkout -B gh-pages || exit 1
 
 echo "Removing old content"
 git rm -rf . || exit 1
