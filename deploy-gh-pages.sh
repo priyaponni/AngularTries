@@ -7,7 +7,7 @@ CURRENT_COMMIT=`git rev-parse HEAD`
 ORIGIN_URL=`git config --get remote.origin.url`
 echo "$ORIGIN_URL"
 
-ls $DIST_DIRECTORY
+ls
 
 ORIGIN_URL_WITH_CREDENTIALS=${ORIGIN_URL/\/\/github.com/\/\/$GITHUB_TOKEN@github.com}
 
