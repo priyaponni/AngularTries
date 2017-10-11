@@ -14,7 +14,7 @@ echo "$ORIGIN_URL_WITH_CREDENTIALS"
 cp .gitignore $DIST_DIRECTORY || exit 1
 
 echo "Checking out gh-pages branch"
-git checkout -B gh-pages || exit 1
+git checkout gh-pages || exit 1
 
 echo "Removing old content"
 git rm -rf . || exit 1
