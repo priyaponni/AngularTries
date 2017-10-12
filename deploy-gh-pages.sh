@@ -26,7 +26,8 @@ git rm -rf . || exit 1
 ls
 
 echo "Copy dist content to root folder"
-cp -r $DIST_DIRECTORY/* . || exit 1
+cp -R $DIST_DIRECTORY/.??* . || exit 1
+cp -R $DIST_DIRECTORY/* . || exit 1
 
 ls
 
